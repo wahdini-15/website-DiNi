@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdf6ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 15px; /* Biar ada ruang kalau layar kecil */
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px; /* Biar di HP ikut menyesuaikan */
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h1 {
+  color: #356859;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin: 12px 0;
+}
+
+.card ul li a {
+  text-decoration: none;
+  background: #356859;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card ul li a:hover {
+  background: #ff69b4;
+  color: #fff;
+}
+
+/* Icon styling */
+.icon {
+  width: 70px;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+/* Animasi icon keranjang */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 480px) {
+  .card h1 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .card ul li a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .icon {
+    width: 55px;
+  }
+}
